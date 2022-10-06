@@ -3,27 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Cartas</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="card p-3 m-5" style="width: 60rem;">
+      <div class="card-body">
+        <h1 class="card-title">Clasificador de cartas</h1>
+        <h3 class="card-text">
+          Obtén una mano aleatorio de cartas y mira cómo se ordenan de mayor a
+          menor en segundos.
+        </h3>
+
+        <p class="card-text">Ingrese el número de cartas que desea</p>
+
+        <div class="input-group mb-3">
+          <input
+            id="containerInput"
+            type="number"
+            class="form-control"
+            placeholder="numero de cartas ejemplo 4"
+            min="1"
+            max="12"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="window.onload()">
+          Aceptar
+        </button>
+
+        <button type="button" class="btn btn-secondary" id="order" onclick=" ">
+          Ordenar
+        </button>
       </div>
     </div>
+
+    <div class="d-flex flex-wrap" id="container"></div>
+
+    <script src="app.js"></script>
   </body>
 </html>
